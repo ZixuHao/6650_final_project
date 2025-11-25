@@ -38,7 +38,7 @@ model.set_logger(new_logger)
 
 # 4. 开始训练
 # 步数可以先少一点，比如 100_000，跑得动再往上加
-model.learn(total_timesteps=100_000)
+model.learn(total_timesteps=1000_000)
 
 # 5. 保存模型
 model.save("flappy_dqn_simple")
