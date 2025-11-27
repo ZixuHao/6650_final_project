@@ -99,8 +99,8 @@ for i in range(num_iters):
     # 每隔一段时间存个 checkpoint
     if (i + 1) % save_every == 0:
         ckpt_path = algo.save(checkpoint_dir)
-        print(f"Saved checkpoint at: {ckpt_path}")
+        print(f"  💾 Saved checkpoint at: {ckpt_path}")
 
-print("\nA2C training finished.")
+print("\n✅ A2C training finished.")
 
 ray.shutdown()

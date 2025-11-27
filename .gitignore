@@ -7,3 +7,5 @@ checkpoints_2/
 *.html
 *_files
 
+# Virtual Environment
+poker/
