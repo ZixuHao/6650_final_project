@@ -4,6 +4,6 @@ checkpoints/
 checkpoints_2/
 
 # Quarto Preview Files
-*.html
-*_files
+# *.html
+# *_files
 
