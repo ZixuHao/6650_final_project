@@ -2,3 +2,10 @@ venv/
 .DS_Store
 checkpoints/
 checkpoints_2/
+
+# Quarto Preview Files
+*.html
+*_files
+
+# Virtual Environment
+poker/
