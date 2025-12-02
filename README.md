@@ -1,6 +1,6 @@
 # 6650 Final Project — Texas Hold’em Reinforcement Learning Benchmark
 
-This project implements, evaluates, and compares multiple RL agents in the **PettingZoo Texas Hold’em** environment:
+This project implements, evaluates, and compares multiple RL agents in the **PettingZoo Texas Hold’em** and **RLCard**environment:
 
 **Rule-based policy**
 **Shallow Q-learning**
@@ -15,21 +15,117 @@ The goal is to build a **reproducible benchmark suite** and analyze performance 
 # Directory Structure
 
 ```
-Baseline Policies/
-    rule_based.py
-    shallow_q.py
-    baseline_analysis.ipynb
-DeepRL/
-    A2C/
-        train_a2c.ipynb
-        single_agent_wrapper.py
-        generate_poker_gif.py
-PPO/
-runs/
-    a2c_run_1/
-    a2c_run_2/
+.
+|-- A2C
+|   |-- a2c_poker_model.zip
+|   |-- a2c_vs_rule_head2head.png
+|   |-- rule_vs_a2c.png
+|   |-- runs
+|   |   |-- a2c_run_1
+|   |   |   |-- a2c_model.zip
+|   |   |   |-- after_training.gif
+|   |   |   |-- before_training.gif
+|   |   |   |-- reward_history.pkl
+|   |   |   `-- training_curve.png
+|   |   |-- a2c_run_2
+|   |   |   |-- a2c_model.zip
+|   |   |   |-- before_training_verbose.gif
+|   |   |   |-- reward_history.pkl
+|   |   |   `-- training_curve.png
+|   |   `-- a2c_run_3
+|   |       |-- a2c_model.zip
+|   |       |-- after_training_verbose.gif
+|   |       |-- before_training_verbose.gif
+|   |       |-- reward_history.pkl
+|   |       `-- training_curve.png
+|   `-- train_a2c_poker.ipynb
+|-- Baseline Policies
+|   |-- RuleBased_Shallow.ipynb
+|   |-- table_head_to_head.png
+|   `-- table_performance_random.png
+|-- README.md
+|-- checkpoints_2
+|   |-- algorithm_state.pkl
+|   |-- policies
+|   |   |-- bot
+|   |   |   |-- policy_state.pkl
+|   |   |   `-- rllib_checkpoint.json
+|   |   `-- learner
+|   |       |-- policy_state.pkl
+|   |       `-- rllib_checkpoint.json
+|   `-- rllib_checkpoint.json
+|-- checkpoints_3
+|   |-- algorithm_state.pkl
+|   |-- policies
+|   |   |-- player_0
+|   |   |   |-- policy_state.pkl
+|   |   |   `-- rllib_checkpoint.json
+|   |   `-- player_1
+|   |       |-- policy_state.pkl
+|   |       `-- rllib_checkpoint.json
+|   `-- rllib_checkpoint.json
+|-- checkpoints_3_sep
+|   |-- algorithm_state.pkl
+|   |-- policies
+|   |   |-- player_0
+|   |   |   |-- policy_state.pkl
+|   |   |   `-- rllib_checkpoint.json
+|   |   `-- player_1
+|   |       |-- policy_state.pkl
+|   |       `-- rllib_checkpoint.json
+|   `-- rllib_checkpoint.json
+|-- checkpoints_3_sep_30epoch
+|   |-- algorithm_state.pkl
+|   |-- policies
+|   |   |-- player_0
+|   |   |   |-- policy_state.pkl
+|   |   |   `-- rllib_checkpoint.json
+|   |   `-- player_1
+|   |       |-- policy_state.pkl
+|   |       `-- rllib_checkpoint.json
+|   `-- rllib_checkpoint.json
+|-- checkpoints_3_share_10epoch
+|   |-- algorithm_state.pkl
+|   |-- policies
+|   |   `-- shared_policy
+|   |       |-- policy_state.pkl
+|   |       `-- rllib_checkpoint.json
+|   `-- rllib_checkpoint.json
+|-- checkpoints_3_shared
+|   |-- algorithm_state.pkl
+|   |-- policies
+|   |   `-- shared_policy
+|   |       |-- policy_state.pkl
+|   |       `-- rllib_checkpoint.json
+|   `-- rllib_checkpoint.json
+|-- ppo
+|   |-- PPO_adversarial
+|   |   |-- train_poke.ipynb
+|   |   |-- train_poke_v2.ipynb
+|   |   |-- train_poke_v2_DQN.ipynb
+|   |   |-- train_poke_v2_seperate.ipynb
+|   |   |-- train_poke_v2_seperate_show.ipynb
+|   |   `-- train_poke_v2_shared.ipynb
+|   |-- baseline_comparison.png
+|   |-- checkpoints_2
+|   |   |-- algorithm_state.pkl
+|   |   |-- policies
+|   |   |   |-- bot
+|   |   |   |   |-- policy_state.pkl
+|   |   |   |   `-- rllib_checkpoint.json
+|   |   |   `-- learner
+|   |   |       |-- policy_state.pkl
+|   |   |       `-- rllib_checkpoint.json
+|   |   `-- rllib_checkpoint.json
+|   |-- ppo_poke.gif
+|   |-- table_ppo_vs_random.png
+|   `-- train_poke_PPO_unit_strategy.ipynb
+|-- ppo_poke_sep.gif
+|-- pyproject.toml
+`-- share_vs_sep_policy_performance
+    |-- table_2aa.png
+    `-- table_spa.png
     
-README.md
 ```
 
 ---
@@ -49,6 +145,7 @@ These baselines provide reference performance before introducing Deep RL (PPO / 
 
 ```python
 from pettingzoo.classic import texas_holdem_v4
+
 ```
 
 Each agent receives:
