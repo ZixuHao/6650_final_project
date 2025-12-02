@@ -25,7 +25,6 @@ DeepRL/
         single_agent_wrapper.py
         generate_poker_gif.py
 PPO/
-DQN/
 runs/
     a2c_run_1/
     a2c_run_2/
@@ -42,7 +41,7 @@ This module implements and evaluates two essential baseline agents for the Texas
 1. **Rule-based Policy (hand-crafted expert system)**
 2. **Shallow RL Agent (Tabular Q-learning)**
 
-These baselines provide reference performance before introducing Deep RL (PPO / DQN / A2C).
+These baselines provide reference performance before introducing Deep RL (PPO / A2C).
 
 ---
 
@@ -93,7 +92,7 @@ We extract:
 
 | Agent      | Win Rate | Tie Rate | Loss Rate | Mean Reward |
 | ---------- | -------- | -------- | --------- | ----------- |
-| Rule-based | 0.600    | 0.012    | 0.388     | 0.568       |
+| Rule-based | 0.582    | 0.002    | 0.416     | 0.460       |
 
 ---
 
@@ -134,7 +133,7 @@ We extract:
 
 | Agent              | Win Rate | Tie Rate | Loss Rate | Mean Reward |
 | ------------------ | -------- | -------- | --------- | ----------- |
-| Shallow Q-learning | 0.954    | 0.004    | 0.042     | 1.990       |
+| Shallow Q-learning | 0.928    | 0.002    | 0.07     | 2.002       |
 
 ---
 
@@ -142,8 +141,8 @@ We extract:
 
 | Agent              | Mean Reward | Win Rate |
 | ------------------ | ----------- | -------- |
-| Rule-based         | 0.568       | 0.600    |
-| Shallow Q-learning | 1.990       | 0.954    |
+| Rule-based         | 0.460       | 0.582    |
+| Shallow Q-learning | 2.002       | 0.928    |
 
 ---
 
@@ -297,4 +296,4 @@ Running all cells will generate:
 ✔ A2C deep RL baseline (**this work**)
 ✔ Complete evaluation suite
 ✔ Unified visualization (GIFs, curves, tables)
-✔ Ready for final benchmark comparison (A2C vs PPO vs DQN)
+✔ Ready for final benchmark comparison (Rule-based baseline vs Shallow Q Learning vs A2C vs PPO)
