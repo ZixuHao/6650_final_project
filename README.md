@@ -4,9 +4,9 @@ This project implements, evaluates, and compares multiple RL agents in the **Pet
 
 **Rule-based policy**
 **Shallow Q-learning**
-**A2C baseline (our work)**
-PPO baseline (group member)
-DQN baseline (group member)
+**A2C baseline**
+**PPO**
+
 
 The goal is to build a **reproducible benchmark suite** and analyze performance across classical and deep RL methods.
 
@@ -28,7 +28,7 @@ PPO/
 runs/
     a2c_run_1/
     a2c_run_2/
-    ...
+    
 README.md
 ```
 
@@ -81,12 +81,6 @@ We extract:
 
 ---
 
-# Rule-based Action Distribution
-
-*(Plot saved as `plots/rule_based_action_dist.png`)*
-![Rule-based Action Distribution](plots/rule_based_action_dist.png)
-
----
 
 # Rule-based Performance vs Random
 
@@ -117,17 +111,6 @@ We extract:
 
 ---
 
-# Learning Curve
-
-![Learning Curve](plots/q_learning_curve.png)
-
----
-
-# Q-table Heatmap
-
-![Q-table Heatmap](plots/q_table_heatmap.png)
-
----
 
 # Shallow Q-learning Performance vs Random
 
