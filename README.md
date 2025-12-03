@@ -369,6 +369,18 @@ Running all cells will generate:
 
 ---
 
+# 4. PPO Agent
+
+In the ppo folder the normal comparison code can be found to run the PPO agent with random policy opponent, the baseline has been added into the code.
+
+---
+
+# 5. PPO Adversarial
+
+In the ppo folder, PPO_Adversarial folder, the adversarial PPO agent model are built with shared-policy version (two agents use one policy) and seperate-policy version (two agents use two policies). After several traning epochs, the evaluation part uses the agent to fight agianst the random policy (fold and no-fold) and compared with the basline.
+
+---
+
 # Project Summary (Updated)
 
 ✔ Rule-based baseline
