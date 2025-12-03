@@ -1,6 +1,6 @@
 # 6650 Final Project — Texas Hold’em Reinforcement Learning Benchmark
 
-This project implements, evaluates, and compares multiple RL agents in the **PettingZoo Texas Hold’em** and **RLCard**environment:
+This project implements, evaluates, and compares multiple RL agents in the **PettingZoo Texas Hold’em** environment:
 
 **Rule-based policy**
 **Shallow Q-learning**
